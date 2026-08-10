@@ -24,7 +24,7 @@ This repository is my personal AI engineering workspace and public learning log.
 - Document the a learning process publicaly
 - Build a portifolio of practical projects
 
-## Repository Structure
+## Repository Structure in detail.
 
 ```text 
 
