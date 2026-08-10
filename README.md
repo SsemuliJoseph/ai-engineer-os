@@ -14,7 +14,7 @@ This repository is my personal AI engineering workspace and public learning log.
 - [Development Setup](#development-setup)
 - [Progress](#progress)
 
-## Goals
+## My Goals
 
 - Build a strong Engineering Foundation
 - Develop practicsl AI and Machine Learning skills
