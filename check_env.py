@@ -1,3 +1,4 @@
+import importlib.metadata
 import sys
 import platform
 import subprocess
@@ -46,6 +47,23 @@ def check_gpu():
     print("GPU: Not set up yet")
 
 
+def check_packages():
+    """Check and print installed key packages"""
+    print("---Package Versions---")
+    packages = ["pytest", "ruff", "black"]
+
+    for package in packages:
+        try:
+            version = importlib.metadata.version(package)
+            meta = importlib.metadata.metadata(package)
+
+            print(f"{package}: {version}")
+            print(f"{package}: {meta['Summary']}")
+
+        except importlib.metadata.PackageNotFoundError:
+            print(f"{package}: Not installed")
+
+
 def main():
     check_python()
     check_os()
@@ -54,6 +72,8 @@ def main():
     check_machine()
     check_docker()
     check_gpu()
+    print()
+    check_packages()
 
 
 if __name__ == "__main__":
